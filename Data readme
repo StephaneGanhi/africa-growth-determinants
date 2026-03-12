@@ -1,0 +1,34 @@
+📦 Data Sources
+This folder must contain the raw data files before running the analysis.
+All data is freely available from the World Bank Open Data portal.
+
+⚠️ Data files are not included in this repository.
+Download each file using the links below and place them in this data/ folder.
+
+
+Required Files — World Bank Open Data
+File to save asIndicatorDirect Linkgdp_annual_growth.xlsGDP growth (annual %)NY.GDP.MKTP.KD.ZG
+inflation_consumer_price.xlsInflation, consumer prices (annual %)FP.CPI.TOTL.ZG
+gross_capital_formation_investment.xlsGross capital formation (% of GDP)NE.GDI.TOTL.ZS
+population_growth_annual%.xlsPopulation growth (annual %)SP.POP.GROW
+
+Optional File — World Bank Open Data
+File to save asIndicatorDirect Linkgdp_per_capita.xlsGDP per capita growth (annual %)NY.GDP.PCAP.KD.ZG
+For Debt Data — IMF World Economic Outlook
+The government debt variable (government_general_gross_debt_%gdp.xls) comes from the IMF:
+
+Go to → IMF WEO Database
+Select "By Countries (all countries)"
+In the subject list, select GGXWDG_NGDP (General government gross debt, % of GDP)
+Download as Excel → rename file to government_general_gross_debt_%gdp.xls
+Place in this data/ folder
+
+
+How to Download from World Bank (step by step)
+For each indicator link above:
+
+Click the link → World Bank indicator page opens
+Click "Download" button (top right of the data table)
+Select "Excel" format
+Save the file in this data/ folder with the exact filename shown above
+
