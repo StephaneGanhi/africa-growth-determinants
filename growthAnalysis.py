@@ -365,19 +365,15 @@ plt.savefig('fig3_correlation.png', dpi=300, bbox_inches='tight')
 plt.show()
 print("✅ fig3_correlation.png")
 
+
 # ── 15. EXPORT ────────────────────────────────────────────────────────────────
-print_section("EXPORT DES RÉSULTATS")
+# Les figures PNG sont sauvegardées automatiquement (fig1, fig2, fig3).
+# Pour exporter les résultats en CSV/Excel, décommenter ci-dessous :
 
-resultats_df = pd.DataFrame(resultats)
-resultats_df.to_csv('resultats_modele.csv', index=False, encoding='utf-8-sig')
-print("✅ resultats_modele.csv")
+# resultats_df = pd.DataFrame(resultats)
+# resultats_df.to_csv('resultats_modele.csv', index=False, encoding='utf-8-sig')
 
-try:
-    with pd.ExcelWriter('resultats_complets.xlsx', engine='openpyxl') as writer:
-        resultats_df.to_excel(writer, sheet_name='Coefficients', index=False)
-        df_afrique.reset_index().to_excel(writer, sheet_name='Données_Afrique', index=False)
-    print("✅ resultats_complets.xlsx")
-except Exception as e:
-    print(f"⚠️ Export Excel : {e}")
-
+# with pd.ExcelWriter('resultats_complets.xlsx', engine='openpyxl') as writer:
+#     resultats_df.to_excel(writer, sheet_name='Coefficients', index=False)
+#     df_afrique.reset_index().to_excel(writer, sheet_name='Données_Afrique', index=False)
 print_section("ANALYSE TERMINÉE AVEC SUCCÈS")
